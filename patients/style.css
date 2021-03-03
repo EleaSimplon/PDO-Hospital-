@@ -1,0 +1,139 @@
+/*** GOOGLE FONT ***/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+html,body
+{
+    background-color: #ff8f4e;
+    text-align: center;
+    font-family: Raleway ,Helvetica , sans-serif;
+    min-width: 400px;
+}
+
+/***** FORM SIGN UP *****/
+
+.container{
+    text-align: center;
+}
+
+.labels
+{
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#form
+{
+    background-image: url(mars.png);
+    background-repeat: no-repeat;
+    background-size: 25vw;
+    background-color: rgb(255, 234, 210);
+    margin:0 auto;
+    border-radius: 6px;
+    width: 75%;
+    max-width: 910px;
+    padding: 80px;
+    padding-top: 70px;
+}
+
+.input-field
+{
+    height: 30px;
+    width: 280px;
+    padding: 5px;
+    margin:10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 12px;
+}
+
+.rightTab
+{
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+/*** BUTTON ***/
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 10px 40px;
+	border-radius: 8px;
+	font-family: 'Pacifico', cursive;
+	font-size: 20px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.red
+{
+	background-color: #db5534;
+	border-bottom: 5px solid #b93f29;
+	text-shadow: 0px -2px #b96f29;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+/***** FORM 2 MODIFY *****/
+
+.container{
+    text-align: center;
+}
+
+.labels2
+{
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#form2
+{
+    background-image: url(moon.png);
+    background-repeat: no-repeat;
+    background-size: 25vw;
+    background-color: rgb(255, 234, 210);
+    margin:0 auto;
+    border-radius: 6px;
+    width: 75%;
+    max-width: 910px;
+    padding: 80px;
+    padding-top: 70px;
+}
+
+.input-field2
+{
+    height: 30px;
+    width: 280px;
+    padding: 5px;
+    margin:10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 12px;
+}
+
+.rightTab2
+{
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+

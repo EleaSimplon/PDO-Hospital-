@@ -6,63 +6,23 @@
 require_once(__DIR__."/../PDO.php");
 
 
-if (empty($_POST["nwfirstName"])) {
+if (empty($_POST["firstName"])) {
     die("Paramètres manquants");
 }
 
 /* Requête préparée pour la sécuruté */
 
-/*
 
-********* ANCIENNE REQUETE **********
+$sql = 'UPDATE patients SET lastname = ?, firstname = ?, birthdate = ?, phone = ?, mail = ? WHERE id = ?';
 
-$insertStatement = $pdo-> prepare("INSERT INTO patients
-(firstName, lastName, birthDate, phone, mail)
-VALUES
-(?, ?, ? , ?, ?);
-");
+$result = $pdo->prepare($sql);
 
-$insertStatement -> execute ([
-    $_POST["firstName"],
-    $_POST["lastName"],
-    $_POST["birthDate"],
-    $_POST["phone"],
-    $_POST["mail"],
-]);
-
-******* NOUVELLE REQUETE 1 **********
-
-$insertStatement = $pdo->prepare('UPDATE patients SET firstName = :nwfirstName, lastName = :nwlastName, birthDate = :nwbirthDate, phone = :nwphone, mail = :nwmail');
-
-     
-$insertStatement -> execute ([
-        $_POST["nwfirstName"],
-        $_POST["nwlastName"],
-        $_POST["nwbirthDate"],
-        $_POST["nwphone"],
-        $_POST["nwmail"],
-    ]);
-
-*/
-
-$insertStatement = $pdo->prepare('UPDATE patients
-SET firstName = :nwfirstName,
-lastName = :nwlastName,
-birthDate = :nwbirthDate,
-phone = :nwphone,
-mail = :nwmail
-WHERE id = nwid');
-
-$req->execute(array(
-
-       'firstName' => $nwfirstName,
-       'lastName' => $nwlastName,
-       'birthDate' => $nwbirthDate,
-       'phone' => $nwphone,
-       'mail' => $nwmail,
-       'id' => $nwid
-
-       ));
+$result->execute(array($_POST["firstName"],
+       $_POST["lastName"],
+       $_POST["birthDate"],
+       $_POST["phone"],
+       $_POST["mail"],
+       $_GET['id']));
 
 /* Chemin rediriger vers INDEX.PHP */
 

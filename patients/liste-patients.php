@@ -26,8 +26,8 @@ $sql1 = 'SELECT * FROM patients';
     <table class="table" border="2">
         <thead>
             <tr>
-                <th style="background-color: rgb(255, 205, 205)">Prénom</th>
-                <th style="background-color: rgb(209, 255, 245)">Nom</th>
+                <th style="background-color: rgb(255, 205, 205)">Nom</th>
+                <th style="background-color: rgb(209, 255, 245)">Prénom</th>
                 <th style="background-color: rgb(255, 244, 209)">Infos</th>
                 <th style="background-color: rgb(255, 244, 209)">Modifier</th>
             </tr>

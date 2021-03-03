@@ -17,7 +17,98 @@ $sql1 = 'SELECT * FROM patients WHERE id='.$userID.'';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <style>
+
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+        html,body
+        {
+            background-color: #c4c4c4;
+            text-align: center;
+            font-family: Raleway ,Helvetica , sans-serif;
+            min-width: 400px;
+        }
+
+        /***** FORM 2 MODIFY *****/
+
+        .container{
+            text-align: center;
+        }
+
+        .labels2
+        {
+            display: inline-block;
+            text-align: right;
+            width: 40%;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        #form2
+        {
+            background-image: url(moon.png);
+            background-repeat: no-repeat;
+            background-size: 25vw;
+            background-color: rgb(255, 234, 210);
+            margin:0 auto;
+            border-radius: 6px;
+            width: 75%;
+            max-width: 910px;
+            padding: 100px;
+            padding-top: 70px;
+        }
+
+        .input-field2
+        {
+            height: 30px;
+            width: 280px;
+            padding: 5px;
+            margin:10px;
+            border: 1px solid #c0c0c0;
+            border-radius: 12px;
+        }
+
+        .rightTab2
+        {
+            display: inline-block;
+            text-align: left;
+            width: 48%;
+            vertical-align: middle;
+        }
+         /*** BUTTON ***/
+
+         .animate
+        {
+            transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+        }
+
+        .action-button
+        {
+            position: relative;
+            padding: 10px 40px;
+            border-radius: 8px;
+            font-family: 'Pacifico', cursive;
+            font-size: 20px;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .red
+        {
+            background-color: #db5534;
+            border-bottom: 5px solid #b93f29;
+            text-shadow: 0px -2px #b96f29;
+        }
+
+        .action-button:active
+        {
+            transform: translate(0px,5px);
+        -webkit-transform: translate(0px,5px);
+            border-bottom: 1px solid;
+        }
+
+    </style>
     <title>Modify profile</title>
 </head>
 
@@ -30,7 +121,7 @@ $sql1 = 'SELECT * FROM patients WHERE id='.$userID.'';
 
                 <h1 style="color:rgb(250, 107, 107);" id="description">Complete to modify your infos...</h1>
 
-                    <form method="post" action="../process/update.php">
+                    <form method="post" action="../process/update.php?id=<?=$userID?>">
 
                         <div class="rowTab2">
                             <div class="labels2">

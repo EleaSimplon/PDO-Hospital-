@@ -4,7 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+        html,body
+        {
+            background-color: #ff8f4e;
+            text-align: center;
+            font-family: Raleway ,Helvetica , sans-serif;
+            min-width: 400px;
+        }
+
+        /***** FORM SIGN UP *****/
+
+        .container{
+            text-align: center;
+        }
+
+        .labels
+        {
+            display: inline-block;
+            text-align: right;
+            width: 40%;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        #form
+        {
+            background-image: url(mars.png);
+            background-repeat: no-repeat;
+            background-size: 25vw;
+            background-color: rgb(255, 234, 210);
+            margin:0 auto;
+            border-radius: 6px;
+            width: 75%;
+            max-width: 910px;
+            padding: 80px;
+            padding-top: 70px;
+        }
+
+        .input-field
+        {
+            height: 30px;
+            width: 280px;
+            padding: 5px;
+            margin:10px;
+            border: 1px solid #c0c0c0;
+            border-radius: 12px;
+        }
+
+        .rightTab
+        {
+            display: inline-block;
+            text-align: left;
+            width: 48%;
+            vertical-align: middle;
+        }
+
+        /*** BUTTON ***/
+
+        .animate
+        {
+            transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+        }
+
+        .action-button
+        {
+            position: relative;
+            padding: 10px 40px;
+            border-radius: 8px;
+            font-family: 'Pacifico', cursive;
+            font-size: 20px;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .red
+        {
+            background-color: #db5534;
+            border-bottom: 5px solid #b93f29;
+            text-shadow: 0px -2px #b96f29;
+        }
+
+        .action-button:active
+        {
+            transform: translate(0px,5px);
+        -webkit-transform: translate(0px,5px);
+            border-bottom: 1px solid;
+        }
+    </style>
+
     <title>Créer un patient</title>
 </head>
 
@@ -13,12 +105,12 @@
     <div class="container">
         <div class="row">
             <div id="form">
-                <h1 style="color:rgb(250, 107, 107);" id="description">Please, complete the following infos...</h1>
+                <h1 style="color:rgb(250, 107, 107);" id="description">Créer un patient :</h1>
                     <form method="post" action="../process/insert.php">
 
                         <div class="rowTab">
                             <div class="labels">
-                                <label>* First Name :</label>
+                                <label>* Prénom :</label>
                             </div>
                             <div class="rightTab">
                                 <input type="text" name="firstName" class="input-field" required placeholder="Jean">
@@ -27,7 +119,7 @@
 
                         <div class="rowTab"> 
                             <div class="labels">
-                               <label>* Last Name :</label>
+                               <label>* Nom :</label>
                             </div>
                             <div class="rightTab">
                                 <input type="text" name="lastName" class="input-field" required placeholder="Nemare">
@@ -36,7 +128,7 @@
 
                         <div class="rowTab"> 
                             <div class="labels">
-                                <label>* Birth Date :</label>
+                                <label>* Date de naissance :</label>
                             </div>
                             <div class="rightTab">
                                 <input type="date" name="birthDate" class="input-field" required placeholder="01/02/1994">
@@ -45,7 +137,7 @@
 
                         <div class="rowTab"> 
                             <div class="labels">
-                                <label>Phone Number :</label>
+                                <label>Téléphone :</label>
                             </div>
                             <div class="rightTab">
                                 <input type="text" name="phone" class="input-field" placeholder="0607080910">
@@ -61,12 +153,16 @@
                             </div>     
                         </div>
                         
-                        <button class="action-button animate red">submit</button>
+                        <button class="action-button animate red">Soumettre</button>
                     </form>
             </div>
         </div>
     </div>
     
+<div class="container link">
+    <a href="/Ecrire-donnees/Exercice-PDO-2/patients/liste-patients.php">Acceder à la liste des patients</a>
+    <a href="/Ecrire-donnees/Exercice-PDO-2/patients/ajout-rendezvous.php">Prendre un Rendez-Vous</a>
+</div>
 </body>
 
 </html>

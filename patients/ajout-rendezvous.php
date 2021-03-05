@@ -26,7 +26,6 @@ $sql1 = 'SELECT * FROM patients';
             background-color: #f7eaa4;
             text-align: center;
             font-family: Raleway ,Helvetica , sans-serif;
-            min-width: 400px;
         }
         .container{
             text-align: center;
@@ -50,9 +49,9 @@ $sql1 = 'SELECT * FROM patients';
             margin:0 auto;
             border-radius: 6px;
             width: 75%;
-            max-width: 910px;
-            padding: 180px;
-            padding-top: 70px;
+            max-width: 300vw;
+            padding: 8vw;
+            padding-top: 5vw;
         }
 
         .input-field3
@@ -146,8 +145,7 @@ $sql1 = 'SELECT * FROM patients';
         </div>
         
     <div class="link">
-        <a href="/Ecrire-donnees/Exercice-PDO-2/patients/liste-patients.php">Acceder à la liste des patients</a>
-        <a href="/Ecrire-donnees/Exercice-PDO-2/patients/modifier-rendezvous.php">Modifier son rendez-vous</a>
+        <a href="/Ecrire-donnees/Exercice-PDO-2/index.php">Accueil</a></br>
     </div>
         
 </body>

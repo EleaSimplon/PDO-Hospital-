@@ -3,18 +3,22 @@
 require_once(__DIR__."/../PDO.php");
 
 
-$sql1 = 'SELECT * FROM appointments
-WHERE idPatients = ?';
+$sql1 = 'SELECT * FROM `appointments`
+WHERE `id` = ?';
 
 $selectStatement = $pdo->prepare($sql1);
-$selectStatement->execute($_GET['id']);
+$selectStatement->execute([$_GET['id']]);
+
 $profile = $selectStatement->fetch();
-$dateTime = explode(" ", $profile['dateHour']);
+
+
+$dateTime = explode(" ",$profile['dateHour']);
 $date = $dateTime[0];
 $heure = $dateTime[1];
 
+
 if (isset ($_GET["message"])) {
-    echo "<div style='padding: 10px; background-color: green; color: white'>".$_GET['message']."</div>";
+    echo "<padding: 10px; width:25vw; background:rgb(238, 154, 123); color:#fff;>".$_GET['message']."</div>";
 }
 
 ?>
@@ -125,19 +129,7 @@ if (isset ($_GET["message"])) {
                 <div id="form3">
 
                     <h1 style="color:rgb(250, 107, 107);">Modifier un Rendez vous !</h1>
-                        <form method="post" action="../process/updateRDV.php">
-
-                            <div class="rowTab3">
-                                <div class="labels3">
-                                    <label>* ID patient:</label>
-                                    <select class="select" name="idPatients">
-                                        <option></option>
-                                        <?php foreach($pdo->query($sql1) as $patient) { ?>
-                                            <option value="<?=$patient["id"]?>"><?=$patient["firstname"]?> <?=$patient["lastname"]?> </option>
-                                        <?php } ?>
-                                    </select>
-                                </div>     
-                            </div>
+                        <form method="post" action="../process/updateRDV.php?id=<?=$_GET['id']?>">
 
                             <div class="rowTab3"> 
                                 <div class="labels3">
@@ -145,7 +137,7 @@ if (isset ($_GET["message"])) {
                                 </div>
                                 <div class="rightTab3">
                                     <input type="date" name="jour" class="input-field" required value="<?=$date?>">
-                                    <input type="time" name="heure" min="09:00" max="18:00" required value="<?=$heure?>>
+                                    <input type="time" name="heure" min="09:00" max="18:00" required value="<?=$heure?>">
                                 </div>     
                             </div>
 
@@ -156,8 +148,7 @@ if (isset ($_GET["message"])) {
         </div>
         
     <div class="link">
-        <a href="./patients/liste-rdv.php">Acceder à la liste des rendez-vous</a>
-
+        <a href="/Ecrire-donnees/Exercice-PDO-2/index.php">Accueil</a></br>
     </div>
         
 </body>

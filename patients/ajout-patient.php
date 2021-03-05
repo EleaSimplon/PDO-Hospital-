@@ -159,10 +159,8 @@
         </div>
     </div>
     
-<div class="container link">
-    <a href="/Ecrire-donnees/Exercice-PDO-2/patients/liste-patients.php">Acceder à la liste des patients</a>
-    <a href="/Ecrire-donnees/Exercice-PDO-2/patients/ajout-rendezvous.php">Prendre un Rendez-Vous</a>
-</div>
+    <a href="/Ecrire-donnees/Exercice-PDO-2/index.php">Accueil</a></br>
+
 </body>
 
 </html>

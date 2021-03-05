@@ -109,7 +109,7 @@ $sql1 = 'SELECT * FROM patients WHERE id='.$userID.'';
         }
 
     </style>
-    <title>Modify profile</title>
+    <title>Modifier fiche patient</title>
 </head>
 
 
@@ -119,13 +119,13 @@ $sql1 = 'SELECT * FROM patients WHERE id='.$userID.'';
         <div class="row">
             <div id="form2">
 
-                <h1 style="color:rgb(250, 107, 107);" id="description">Complete to modify your infos...</h1>
+                <h1 style="color:rgb(250, 107, 107);" id="description">Modifier la fiche patient :</h1>
 
                     <form method="post" action="../process/update.php?id=<?=$userID?>">
 
                         <div class="rowTab2">
                             <div class="labels2">
-                                <label>* First Name :</label>
+                                <label>* Prénom :</label>
                             </div>
                             <div class="rightTab2">
                                 <input type="text" name="firstName" class="input-field" required placeholder="Jean">
@@ -134,7 +134,7 @@ $sql1 = 'SELECT * FROM patients WHERE id='.$userID.'';
 
                         <div class="rowTab2"> 
                             <div class="labels2">
-                               <label>* Last Name :</label>
+                               <label>* Nom :</label>
                             </div>
                             <div class="rightTab2">
                                 <input type="text" name="lastName" class="input-field" required placeholder="Nemare">
@@ -143,7 +143,7 @@ $sql1 = 'SELECT * FROM patients WHERE id='.$userID.'';
 
                         <div class="rowTab2"> 
                             <div class="labels2">
-                                <label>* Birth Date :</label>
+                                <label>* Date de naissance :</label>
                             </div>
                             <div class="rightTab2">
                                 <input type="date" name="birthDate" class="input-field" required placeholder="01/02/1994">
@@ -152,7 +152,7 @@ $sql1 = 'SELECT * FROM patients WHERE id='.$userID.'';
 
                         <div class="rowTab2"> 
                             <div class="labels2">
-                                <label>Phone Number :</label>
+                                <label>Téléphone :</label>
                             </div>
                             <div class="rightTab2">
                                 <input type="text" name="phone" class="input-field" placeholder="0607080910">
@@ -168,7 +168,7 @@ $sql1 = 'SELECT * FROM patients WHERE id='.$userID.'';
                             </div>     
                         </div>
                         
-                        <button class="action-button animate red">Modify</button>
+                        <button class="action-button animate red">Modifier</button>
                     </form>
             </div>
         </div>
